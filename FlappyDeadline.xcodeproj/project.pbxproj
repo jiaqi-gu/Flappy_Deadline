@@ -16,6 +16,7 @@
 		9A463D2F1C45F9FE001B5E0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A463D2D1C45F9FE001B5E0C /* LaunchScreen.storyboard */; };
 		9A463D3A1C45F9FE001B5E0C /* FlappyDeadlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A463D391C45F9FE001B5E0C /* FlappyDeadlineTests.swift */; };
 		9A463D451C45F9FE001B5E0C /* FlappyDeadlineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A463D441C45F9FE001B5E0C /* FlappyDeadlineUITests.swift */; };
+		9A463D531C45FB09001B5E0C /* RandomFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A463D521C45FB09001B5E0C /* RandomFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		9A463D1D1C45F9FD001B5E0C /* FlappyDeadline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyDeadline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A463D201C45F9FD001B5E0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A463D221C45F9FD001B5E0C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		9A463D241C45F9FD001B5E0C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		9A463D241C45F9FD001B5E0C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GameScene.swift; sourceTree = "<group>"; };
 		9A463D261C45F9FD001B5E0C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9A463D291C45F9FD001B5E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A463D2B1C45F9FE001B5E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		9A463D401C45F9FE001B5E0C /* FlappyDeadlineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyDeadlineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A463D441C45F9FE001B5E0C /* FlappyDeadlineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyDeadlineUITests.swift; sourceTree = "<group>"; };
 		9A463D461C45F9FE001B5E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A463D521C45FB09001B5E0C /* RandomFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				9A463D2B1C45F9FE001B5E0C /* Assets.xcassets */,
 				9A463D2D1C45F9FE001B5E0C /* LaunchScreen.storyboard */,
 				9A463D301C45F9FE001B5E0C /* Info.plist */,
+				9A463D521C45FB09001B5E0C /* RandomFunction.swift */,
 			);
 			path = FlappyDeadline;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				TargetAttributes = {
 					9A463D1C1C45F9FD001B5E0C = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = FB4S6T6735;
 					};
 					9A463D341C45F9FE001B5E0C = {
 						CreatedOnToolsVersion = 7.2;
@@ -265,6 +269,7 @@
 			files = (
 				9A463D251C45F9FD001B5E0C /* GameScene.swift in Sources */,
 				9A463D271C45F9FD001B5E0C /* GameViewController.swift in Sources */,
+				9A463D531C45FB09001B5E0C /* RandomFunction.swift in Sources */,
 				9A463D211C45F9FD001B5E0C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,10 +412,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlappyDeadline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlappyDeadline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -418,10 +427,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlappyDeadline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlappyDeadline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
